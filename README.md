@@ -85,3 +85,31 @@ while number!='Stop':
     continue
     if number=='Stop':
         print(f'Have a grat day!Come back soon!')
+
+#QRCODES
+import pyqrcode
+import png
+from pyqrcode import QRCode
+address = "https://www.youtube.com/watch?v=r8ETeQX_Zv4&list=RDr8ETeQX_Zv4&start_radio=1"
+url=pyqrcode.create(address)
+url.png("capitalt.png", scale = 10)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
