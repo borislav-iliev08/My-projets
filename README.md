@@ -94,7 +94,44 @@ address = "https://www.youtube.com/watch?v=r8ETeQX_Zv4&list=RDr8ETeQX_Zv4&start_
 url=pyqrcode.create(address)
 url.png("capitalt.png", scale = 10)
 
+#LOGIN SIMULATON2
+import time
 
+print('Hello user, can you enter your nickname and password so we can remember you?')
+-------------------------------------------------------------------------------------
+# Въвеждане на реалните данни
+real_nickname = input('Enter nickname here: ')
+real_password = input('Enter strong password here: ')
+
+# try to log with nickname
+nick_trys = 4
+while nick_trys > 0:
+    current_nickname = input('Login nickname: ')
+    if current_nickname == real_nickname:
+        print(f'{current_nickname} matched with our database.')
+        break
+    else:
+        nick_trys -= 1
+        print(f'{current_nickname} not matching!')
+        if nick_trys == 0:
+            print('Too many attempts. Try again later.')
+            exit()
+        print(f'Remaining attempts: {nick_trys}')
+
+# try to log with password
+pass_trys = 4
+while pass_trys > 0:
+    current_pass = input('Now type your password to identify: ')
+    if current_pass == real_password:
+        print(f'{current_pass} matched with our database. Have fun!')
+        break
+    else:
+        pass_trys -= 1
+        print(f'{current_pass} not matching!')
+        if pass_trys == 0:
+            print('Too many attempts. Try again later.')
+            exit()
+        print(f'Remaining attempts: {pass_trys}')
 
 
 
